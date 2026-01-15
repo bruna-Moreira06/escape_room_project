@@ -23,11 +23,11 @@ public class Porte : MonoBehaviour
     {
         if (opened)
         {
-            pivot.localRotation = Quaternion.Lerp(pivot.rotation, closedReference.localRotation, Time.deltaTime * speed);
+            pivot.localRotation = Quaternion.Lerp(pivot.localRotation, openendReference.localRotation, Time.deltaTime * speed);
         }
         else
         {
-            pivot.localRotation = Quaternion.Lerp(pivot.rotation, openendReference.localRotation, Time.deltaTime * speed);
+            pivot.localRotation = Quaternion.Lerp(pivot.localRotation, closedReference.localRotation, Time.deltaTime * speed);
         }
     }
 }
